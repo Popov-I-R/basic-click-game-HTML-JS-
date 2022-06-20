@@ -4,16 +4,16 @@ var workers = 0;
  
 function gameLoop() {
     addCoins(); // Добавяме в game Loop-а функция за case при който имаме купен работник, който да копае жълтици.
-    updateCoinsDisplay()
-    updateWorkerDisplay ()
+    updateCoinsDisplay();
+    updateWorkerDisplay ();
 }
 
 function addCoins(){
-    coins += workers;
+    coins += workers / 10;
 }
 
 function updateCoinsDisplay () {
-    document.getElementById("coinsDisplay").innerText = coins;
+    document.getElementById("coinsDisplay").innerText = coins.toFixed(0);
 }
 
 function updateWorkerDisplay () {
@@ -26,12 +26,12 @@ function incrementCoins() { // Инкрементира с по 1 жълтица
 }
 
 function buyWorker() { // Добавяме опция за купуване на работник
-    if (coins >= 10) {
-        coins -=10
-        workers ++
+    if (coins >= 20) {
+        coins -=20;
+        workers ++;
     }
 }
 
 console.log("Start");
-setInterval(gameLoop,1000); // GameLoop на 1 сек. 
+setInterval(gameLoop,100); // GameLoop на 1 сек. 
 
