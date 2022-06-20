@@ -1,13 +1,15 @@
-function sayHi() {
- console.log(`Hello !`)
-
-}
+var  coins = 0; // нарочно е глобална
  
  
 function gameLoop() {
-    console.log("Loop")
+    console.log(`Coins ${coins}`);
+    document.getElementById("coinsDisplay").innerText = coins;
 }
 
-console.log("Start")
-setInterval(gameLoop,1000)
+function incrementCoins() {
+    coins++;
+}
+
+console.log("Start");
+setInterval(gameLoop,1000);
 
