@@ -16,14 +16,18 @@ function updateCoinsDisplay () {
     document.getElementById("coinsDisplay").innerText = coins;
 }
 
+function updateWorkerDisplay () {
+    document.getElementById("workersDisplay").innerText = workers;
+}
+
 function incrementCoins() { // Инкрементира с по 1 жълтица
     coins++; 
     updateCoinsDisplay() // За да се променя на всеки клип, а не да рефрешва през 1 сек заради gameLoop-a.
 }
 
 function buyWorker() { // Добавяме опция за купуване на работник
-    if (coins > 100) {
-        coins -=100
+    if (coins >= 10) {
+        coins -=10
         workers ++
     }
 }
