@@ -3,9 +3,9 @@ var workers = 0;
  
  
 function gameLoop() {
-    console.log(`Coins ${coins}`);
     addCoins(); // Добавяме в game Loop-а функция за case при който имаме купен работник, който да копае жълтици.
     updateCoinsDisplay()
+    updateWorkerDisplay ()
 }
 
 function addCoins(){
